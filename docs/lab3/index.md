@@ -52,7 +52,7 @@
 gcloud pubsub topics create new-lab-report
 ```
 
-3.  Cloud Run を使用できるようにサービスを有効化します。
+3. Cloud Run を使用できるようにサービスを有効化します。
     
 ```
 gcloud services enable run.googleapis.com
@@ -79,7 +79,7 @@ gcloud services enable run.googleapis.com
 イメージを保存したら、Cloud Run というサービスで、イメージから起動したコンテナ アプリケーションを実行します。
 <br />
 
- 1.  Cloud Shell に戻り、このラボに必要な Git リポジトリのクローンを作成します。  
+ 1. Cloud Shell に戻り、このラボに必要な Git リポジトリのクローンを作成します。  
     そして、 lab-servicer ディレクトリに移動します。
     
 ```
@@ -88,7 +88,7 @@ cd pet-theory/lab05/lab-service
 ```
 <br />
 
-2.  HTTPS リクエストを受信し、Pub/Sub にパブリッシュするのに必要な以下のパッケージをインストールします。
+2. HTTPS リクエストを受信し、Pub/Sub にパブリッシュするのに必要な以下のパッケージをインストールします。
 
 ```    
 npm install express
@@ -100,7 +100,7 @@ npm install @google-cloud/pubsub
 
 <br />
 
-3.  Cloud Run にコードをどのように開始するかを指示できるよう、package.json ファイルを編集します。  
+3. Cloud Run にコードをどのように開始するかを指示できるよう、package.json ファイルを編集します。  
     nano エディタで package.json ファイルを開きます。
     
  ```
@@ -108,9 +108,9 @@ nano package.json
 ```
 <br />
 
-4.  コード内の scripts セクションに以下のように "start": "node index.js" の行を追加して、ファイルを保存します。  
-    ※ 行頭が適切にインデントされていることを確認してください。
-    ※ インデントを修正する場合、全角スペースを使わないように注意してください。 
+4. コード内の scripts セクションに以下のように "start": "node index.js" の行を追加して、ファイルを保存します。  
+   ※ 行頭が適切にインデントされていることを確認してください。
+   ※ インデントを修正する場合、全角スペースを使わないように注意してください。 
     
 ```
 "scripts": {
@@ -122,10 +122,10 @@ nano package.json
 編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
 <br />
 
-5.  index.js という名前の新しいファイルを作成して、コードを追加します。  
-    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。  
-    ※ 行頭を適切にインデントされていることを確認してください。  
-    ※ インデントを修正する場合、全角スペースを使用しないように注意してください。
+5. index.js という名前の新しいファイルを作成して、コードを追加します。  
+   編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。  
+   ※ 行頭を適切にインデントされていることを確認してください。  
+   ※ インデントを修正する場合、全角スペースを使用しないように注意してください。
 
     
 ```
@@ -172,8 +172,8 @@ await publishPubSubMessage(labReport);
 -   メッセージ データを Cloud Pub/Sub のトピックにパブリッシュします。
  <br />
 
-6.  次に、Dockerfile という名前のファイルを作成して、以下のコードを追加します。  
-    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
+6. 次に、Dockerfile という名前のファイルを作成して、以下のコードを追加します。  
+   編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
     
 ```
 nano Dockerfile
@@ -188,7 +188,7 @@ CMD [ "npm", "start" ]
 ```
 <br />
 
-7.  Cloud Build を使用してコンテナ イメージのビルド (作成) と Google Contrainer Registry への保存を実行します。
+7. Cloud Build を使用してコンテナ イメージのビルド (作成) と Google Contrainer Registry への保存を実行します。
 
 ```
 gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/lab-report-service
@@ -196,7 +196,7 @@ gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/lab-report-service
 gcr.io は Google Container Registry のドメインを表しており、上記のコマンドを実行することで、ビルドされた lab-report-service という名前のコンテナ イメージが Google Container Registry に保存されます。
 <br />
 
-8.  上でビルド・保存したイメージから、Cloud Run に lab-report-service という名前でコンテナ アプリケーションをデプロイし実行します。
+8. 上でビルド・保存したイメージから、Cloud Run に lab-report-service という名前でコンテナ アプリケーションをデプロイし実行します。
 
 ```
 gcloud run deploy lab-report-service \
@@ -224,14 +224,14 @@ Service [lab-report-service] revision [lab-report-service-00001] has been deploy
 Lab Report Service の動作をテストするために、 3 件の HTTPS POST をシミュレートします。これら 3 件の POST には、それぞれ 1 つのサンプル メッセージ (ID 番号) が含まれています。
 <br />
 
-1.  Lab Report Service の URL を環境変数に設定して使用しやすくします。
+1. Lab Report Service の URL を環境変数に設定して使用しやすくします。
     
 ```
 export LAB_REPORT_SERVICE_URL=$(gcloud run services describe lab-report-service --platform managed --region us-central1 --format="value(status.address.url)")
 ```
 <br />
 
-2.  LAB_REPORT_SERVICE_URL が正しく取得されたことを確認します。
+2. LAB_REPORT_SERVICE_URL が正しく取得されたことを確認します。
     
 ```
 echo $LAB_REPORT_SERVICE_URL
