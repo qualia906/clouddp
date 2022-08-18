@@ -87,8 +87,6 @@
    cd pet-theory/lab05/lab-service
    ```
 
-<br />
-
 2. HTTPS リクエストを受信し、Pub/Sub にパブリッシュするのに必要な以下のパッケージをインストールします。
 
    ```    
@@ -99,16 +97,13 @@
 
    これらのコマンドは package.json ファイルを更新し、このサービスに必要な依存関係を指定します。
 
-<br />
-
 3. Cloud Run にコードをどのように開始するかを指示できるよう、package.json ファイルを編集します。  
    nano エディタで package.json ファイルを開きます。 
 
    ```
    nano package.json
    ```
-
-<br />
+   
 
 4. コード内の scripts セクションに以下のように "start": "node index.js" の行を追加して、ファイルを保存します。  
    ※ 行頭が適切にインデントされていることを確認してください。
