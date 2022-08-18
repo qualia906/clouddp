@@ -66,13 +66,19 @@
 
 -  Kubernetes クラスタの作成時には、ラボガイドのコマンドではなく、以下のコマンドを実行してください。
 
-```gcloud container clusters create io --num-nodes=4```
+   ```
+   gcloud container clusters create io --num-nodes=4
+   ```
 
 - 「ポッドの操作」セクションで最初に
 
-```curl http://127.0.0.1:10080/secure```
+   ```
+   curl http://127.0.0.1:10080/secure
+   ```
 
-を実行すると、以下のメッセージが出力されます。  
-この時点ではこのようにエラーが返されて認可に失敗することを確認してください。
+   を実行すると、以下のメッセージが出力されます。  
+   この時点ではこのようにエラーが返されて認可に失敗することを確認してください。
 
-```authorization failed```
+   ```
+   authorization failed
+   ```
