@@ -86,6 +86,7 @@
    git clone https://github.com/rosera/pet-theory.git
    cd pet-theory/lab05/lab-service
    ```
+   <br />
 
 2. HTTPS リクエストを受信し、Pub/Sub にパブリッシュするのに必要な以下のパッケージをインストールします。
 
@@ -93,9 +94,11 @@
    npm install express
    npm install body-parser
    npm install @google-cloud/pubsub
-   ```  
+   ```
 
    これらのコマンドは package.json ファイルを更新し、このサービスに必要な依存関係を指定します。
+   
+   <br />
 
 3. Cloud Run にコードをどのように開始するかを指示できるよう、package.json ファイルを編集します。  
    nano エディタで package.json ファイルを開きます。 
@@ -104,6 +107,7 @@
    nano package.json
    ```
    
+   <br />
 
 4. コード内の scripts セクションに以下のように "start": "node index.js" の行を追加して、ファイルを保存します。  
    ※ 行頭が適切にインデントされていることを確認してください。
@@ -115,10 +119,9 @@
        "test": "echo \"Error: no test specified\" && exit 1"
      },
    ```
-
    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
-
-<br />
+   
+   <br />
 
 5. index.js という名前の新しいファイルを作成して、コードを追加します。  
    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。  
@@ -163,10 +166,10 @@
    await publishPubSubMessage(labReport);
    ```
 
-これら 2 つの行で、サービスの主な処理が以下のとおり行われます。
+   これら 2 つの行で、サービスの主な処理が以下のとおり行われます。
 
--   受け取った POST リクエストからメッセージ データを抽出します。
--   メッセージ データを Cloud Pub/Sub のトピックにパブリッシュします。
+   -   受け取った POST リクエストからメッセージ データを抽出します。
+   -   メッセージ データを Cloud Pub/Sub のトピックにパブリッシュします。
 
 <br />
 
@@ -185,7 +188,7 @@
    CMD [ "npm", "start" ]
    ```
 
-<br />
+   <br />
 
 7. Cloud Build を使用してコンテナ イメージのビルド (作成) と Google Contrainer Registry への保存を実行します。
 
