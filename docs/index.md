@@ -10,7 +10,7 @@
 -   Microsoft Azure
     -   [クラウド設計パターン](https://docs.microsoft.com/ja-jp/azure/architecture/patterns/)
   
- -   Google Cloud
+-  Google Cloud
     -   [Google Cloud ソリューションデザインパターン](https://events.withgoogle.com/solution-design-pattern/)
     -   [Google Cloud アーキテクチャ センター](https://cloud.google.com/architecture?hl=ja)
  
@@ -67,8 +67,12 @@
 -  Kubernetes クラスタの作成時には、ラボガイドのコマンドではなく、以下のコマンドを実行してください。
 
 ```gcloud container clusters create io --num-nodes=4```
+
 - 「ポッドの操作」セクションで最初に
+
 ```curl http://127.0.0.1:10080/secure```
+
 を実行すると、以下のメッセージが出力されます。  
 この時点ではこのようにエラーが返されて認可に失敗することを確認してください。
+
 ```authorization failed```
