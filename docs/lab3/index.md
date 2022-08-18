@@ -46,17 +46,15 @@
 
 1. Cloud Console で Cloud Shell を起動します。
 
-2. 次のコマンドを実行して、Pub/Sub トピックを作成します。
- 
-```
-gcloud pubsub topics create new-lab-report
-```
+2. 次のコマンドを実行して、Pub/Sub トピックを作成します。 
+   ```
+   gcloud pubsub topics create new-lab-report
+   ```
 
 3. Cloud Run を使用できるようにサービスを有効化します。
-    
-```
-gcloud services enable run.googleapis.com
-```
+   ```
+   gcloud services enable run.googleapis.com
+   ```
 <br />
  
 ## Lab Report Serive
@@ -79,33 +77,28 @@ gcloud services enable run.googleapis.com
 イメージを保存したら、Cloud Run というサービスで、イメージから起動したコンテナ アプリケーションを実行します。
 <br />
 
- 1. Cloud Shell に戻り、このラボに必要な Git リポジトリのクローンを作成します。  
-    そして、 lab-servicer ディレクトリに移動します。
-    
-```
-git clone https://github.com/rosera/pet-theory.git
-cd pet-theory/lab05/lab-service
-```
+1. Cloud Shell に戻り、このラボに必要な Git リポジトリのクローンを作成します。  
+   そして、 lab-servicer ディレクトリに移動します。
+   ```
+   git clone https://github.com/rosera/pet-theory.git
+   cd pet-theory/lab05/lab-service
+   ```
 <br />
 
 2. HTTPS リクエストを受信し、Pub/Sub にパブリッシュするのに必要な以下のパッケージをインストールします。
-
-```    
-npm install express
-npm install body-parser
-npm install @google-cloud/pubsub
-```
-  
+   ```    
+   npm install express
+   npm install body-parser
+   npm install @google-cloud/pubsub
+   ```  
 これらのコマンドは package.json ファイルを更新し、このサービスに必要な依存関係を指定します。
-
 <br />
 
 3. Cloud Run にコードをどのように開始するかを指示できるよう、package.json ファイルを編集します。  
-    nano エディタで package.json ファイルを開きます。
-    
- ```
-nano package.json
-```
+   nano エディタで package.json ファイルを開きます。 
+   ```
+   nano package.json
+   ```
 <br />
 
 4. コード内の scripts セクションに以下のように "start": "node index.js" の行を追加して、ファイルを保存します。  
