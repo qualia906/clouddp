@@ -171,7 +171,7 @@
    -   受け取った POST リクエストからメッセージ データを抽出します。
    -   メッセージ データを Cloud Pub/Sub のトピックにパブリッシュします。
 
-<br />
+   <br />
 
 6. 次に、Dockerfile という名前のファイルを作成して、以下のコードを追加します。  
    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
@@ -197,7 +197,7 @@
    ```
    gcr.io は Google Container Registry のドメインを表しており、上記のコマンドを実行することで、ビルドされた lab-report-service という名前のコンテナ イメージが Google Container Registry に保存されます。
 
-<br />
+   <br />
 
 8. 上でビルド・保存したイメージから、Cloud Run に lab-report-service という名前でコンテナ アプリケーションをデプロイし実行します。
 
@@ -472,7 +472,7 @@ Pub/Sub の「new-lab-report」トピックにメッセージがパブリッシ�
    gcloud run services add-iam-policy-binding email-service --member=serviceAccount:pubsub-cloud-run-invoker@$GOOGLE_CLOUD_PROJECT.iam.gserviceaccount.com --role=roles/run.invoker --region us-central1 --platform managed
    ```
 
-<br />
+   <br />
 
 3. 次に、以下の一連のコマンドを実行して、上記で権限が付与されたサービス アカウントの認証トークンを使用して Pub/Sub のサブスクリプションが Email Service にメッセージ送信してトリガーできるように構成します。
 
