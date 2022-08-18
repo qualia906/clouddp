@@ -1,0 +1,2 @@
+theme: jekyll-theme-slate
+title: Cloud Run と Pub/Sub を使用して復元性に優れた非同期システムをビルドする
