@@ -41,7 +41,7 @@
 
 <br />    
 
-### Lab 3: Cloud Run と Pub/Sub を使用して復元性に優れた非同期システムをビルドする  【[Open Lab Site](https://www.cloudskillsboost.google/focuses/8389?parent=catalog)】
+### Lab 3: Cloud Run と Pub/Sub を使用して復元性に優れた非同期システムをビルドする 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/8389?parent=catalog)】
 
 -   [ラボ手順](https://qualia906.github.io/clouddp/lab3)（このラボ手順を使用してください）
 
@@ -49,7 +49,7 @@
 
 <br />    
 
-### Lab 4: Bokeh と BigQuery によるカスタム対話型ダッシュボードの作成[【Open Lab Site】](https://www.cloudskillsboost.google/focuses/1820?parent=catalog)
+### Lab 4: Bokeh と BigQuery によるカスタム対話型ダッシュボードの作成 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/1820?parent=catalog)】
 
 -   [日本語ラボ手順](https://docs.google.com/document/d/1nhpS-0XRfvR_KKnSbK7hCmmPJwMfq5zbjCsOhKJeGW8/edit?usp=sharing)（このラボ手順を使用してください）
 
@@ -58,11 +58,11 @@
  
 <br />
 
-### Lab 5: Spinnaker と Kubernetes Engine による継続的デリバリーパイプライン[【Open Lab Site】](https://www.cloudskillsboost.google/focuses/552?parent=catalog)
+### Lab 5: Spinnaker と Kubernetes Engine による継続的デリバリーパイプライン【[Open Lab Site](https://www.cloudskillsboost.google/focuses/552?parent=catalog)】
 
 <br />
 
-### Lab 6: Kubernetes を使った Cloud のオーケストレーション  [【Open Lab Site】](https://www.cloudskillsboost.google/focuses/557?parent=catalog)
+### Lab 6: Kubernetes を使った Cloud のオーケストレーション 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/557?parent=catalog)】
 
 -  Kubernetes クラスタの作成時には、ラボガイドのコマンドではなく、以下のコマンドを実行してください。
 
