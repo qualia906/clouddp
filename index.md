@@ -1,10 +1,3 @@
----
-title: 実践クラウドデザインパターン - Class Note
----
-
-# 実践クラウドデザインパターン Class Note
-
-
 ## Links
 
 -   [Cloud Skills Boost](https://www.cloudskillsboost.google/)
