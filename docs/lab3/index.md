@@ -46,12 +46,14 @@
 
 1. Cloud Console で Cloud Shell を起動します。
 
-2. 次のコマンドを実行して、Pub/Sub トピックを作成します。 
+2. 次のコマンドを実行して、Pub/Sub トピックを作成します。
+
    ```
    gcloud pubsub topics create new-lab-report
    ```
 
 3. Cloud Run を使用できるようにサービスを有効化します。
+
    ```
    gcloud services enable run.googleapis.com
    ```
@@ -79,130 +81,142 @@
 
 1. Cloud Shell に戻り、このラボに必要な Git リポジトリのクローンを作成します。  
    そして、 lab-servicer ディレクトリに移動します。
+   
    ```
    git clone https://github.com/rosera/pet-theory.git
    cd pet-theory/lab05/lab-service
    ```
+
 <br />
 
 2. HTTPS リクエストを受信し、Pub/Sub にパブリッシュするのに必要な以下のパッケージをインストールします。
+
    ```    
    npm install express
    npm install body-parser
    npm install @google-cloud/pubsub
    ```  
-これらのコマンドは package.json ファイルを更新し、このサービスに必要な依存関係を指定します。
+
+   これらのコマンドは package.json ファイルを更新し、このサービスに必要な依存関係を指定します。
+
 <br />
 
 3. Cloud Run にコードをどのように開始するかを指示できるよう、package.json ファイルを編集します。  
    nano エディタで package.json ファイルを開きます。 
+
    ```
    nano package.json
    ```
+
 <br />
 
 4. コード内の scripts セクションに以下のように "start": "node index.js" の行を追加して、ファイルを保存します。  
    ※ 行頭が適切にインデントされていることを確認してください。
    ※ インデントを修正する場合、全角スペースを使わないように注意してください。 
     
-```
-"scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-```
+   ```
+   "scripts": {
+       "start": "node index.js",
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+   ```
 
-編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
+   編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
+
 <br />
 
 5. index.js という名前の新しいファイルを作成して、コードを追加します。  
    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。  
    ※ 行頭を適切にインデントされていることを確認してください。  
    ※ インデントを修正する場合、全角スペースを使用しないように注意してください。
-
     
-```
-nano index.js
-
-# 下記のコードをコピー & ペーストで追加する
-const {PubSub} = require('@google-cloud/pubsub');
-const pubsub = new PubSub();
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-app.use(bodyParser.json());
-const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log('Listening on port', port);
-});
-app.post('/', async (req, res) => {
-  try {
-    const labReport = req.body;
-    await publishPubSubMessage(labReport);
-    res.status(204).send();
-  }
-  catch (ex) {
-    console.log(ex);
-    res.status(500).send(ex);
-  }
-})
-async function publishPubSubMessage(labReport) {
-  const buffer = Buffer.from(JSON.stringify(labReport));
-  await pubsub.topic('new-lab-report').publish(buffer);
-}
-
-```
+   ```
+   nano index.js
+   
+   # 下記のコードをコピー & ペーストで追加する
+   const {PubSub} = require('@google-cloud/pubsub');
+   const pubsub = new PubSub();
+   const express = require('express');
+   const app = express();
+   const bodyParser = require('body-parser');
+   app.use(bodyParser.json());
+   const port = process.env.PORT || 8080;
+   app.listen(port, () => {
+     console.log('Listening on port', port);
+   });
+   app.post('/', async (req, res) => {
+     try {
+       const labReport = req.body;
+       await publishPubSubMessage(labReport);
+       res.status(204).send();
+     }
+     catch (ex) {
+       console.log(ex);
+       res.status(500).send(ex);
+     }
+   })
+   async function publishPubSubMessage(labReport) {
+     const buffer = Buffer.from(JSON.stringify(labReport));
+     await pubsub.topic('new-lab-report').publish(buffer);
+   }
+   ```
   
-このコードの中核となるのは末尾の以下の部分です。
-```
-const labReport = req.body;
-await publishPubSubMessage(labReport);
-```
+   このコードの中核となるのは末尾の以下の部分です。
+
+   ```
+   const labReport = req.body;
+   await publishPubSubMessage(labReport);
+   ```
 
 これら 2 つの行で、サービスの主な処理が以下のとおり行われます。
 
 -   受け取った POST リクエストからメッセージ データを抽出します。
 -   メッセージ データを Cloud Pub/Sub のトピックにパブリッシュします。
- <br />
+
+<br />
 
 6. 次に、Dockerfile という名前のファイルを作成して、以下のコードを追加します。  
    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
     
-```
-nano Dockerfile
+   ```
+   nano Dockerfile
 
-# 下記のコードを追加
-FROM node:10
-WORKDIR /usr/src/app
-COPY package.json package*.json ./
-RUN npm install --only=production
-COPY . .
-CMD [ "npm", "start" ]
-```
+   # 下記のコードを追加
+   FROM node:10
+   WORKDIR /usr/src/app
+   COPY package.json package*.json ./
+   RUN npm install --only=production
+   COPY . .
+   CMD [ "npm", "start" ]
+   ```
+
 <br />
 
 7. Cloud Build を使用してコンテナ イメージのビルド (作成) と Google Contrainer Registry への保存を実行します。
 
-```
-gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/lab-report-service
-```
-gcr.io は Google Container Registry のドメインを表しており、上記のコマンドを実行することで、ビルドされた lab-report-service という名前のコンテナ イメージが Google Container Registry に保存されます。
+   ```
+   gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/lab-report-service
+   ```
+   gcr.io は Google Container Registry のドメインを表しており、上記のコマンドを実行することで、ビルドされた lab-report-service という名前のコンテナ イメージが Google Container Registry に保存されます。
+
 <br />
 
 8. 上でビルド・保存したイメージから、Cloud Run に lab-report-service という名前でコンテナ アプリケーションをデプロイし実行します。
 
-```
-gcloud run deploy lab-report-service \
-  --image gcr.io/$GOOGLE_CLOUD_PROJECT/lab-report-service \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated \
-  --max-instances=1
-```
-デプロイが完了したら以下のようなメッセージが表示されます
-```
-Service [lab-report-service] revision [lab-report-service-00001] has been deployed and is serving traffic at https://lab-report-service-[hash].a.run.app
-```
+   ```
+   gcloud run deploy lab-report-service \
+     --image gcr.io/$GOOGLE_CLOUD_PROJECT/lab-report-service \
+     --platform managed \
+     --region us-central1 \
+     --allow-unauthenticated \
+     --max-instances=1
+   ```
+
+   デプロイが完了したら以下のようなメッセージが表示されます
+   
+   ```
+   Service [lab-report-service] revision [lab-report-service-00001] has been deployed and is serving traffic at https://lab-report-service-[hash].a.run.app
+   ```
 
 -  \-\-image オプションでは、デプロイするコンテナ アプリケーションのイメージ (上でビルド・保存したイメージ) を指定しています。
 
