@@ -43,7 +43,7 @@
 
 ### Lab 3: Cloud Run と Pub/Sub を使用して復元性に優れた非同期システムをビルドする  【[Open Lab Site](https://www.cloudskillsboost.google/focuses/8389?parent=catalog)】
 
--   [ラボ手順](https://docs.google.com/document/d/11zC8ZpHiGQDlqTgvIvUnnEd4J3mrv4ZqgXsAxFUaWL0/edit?usp=sharing)（このラボ手順を使用してください）
+-   [ラボ手順](https://qualia906.github.io/clouddp/lab3)（このラボ手順を使用してください）
 
 -   Cloud Skills Boost で表示される ユーザ 1 のユーザ名でログインしてください。
 
