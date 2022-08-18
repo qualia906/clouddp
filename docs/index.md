@@ -1,7 +1,7 @@
 ## Links
 
 -   [Cloud Skills Boost](https://www.cloudskillsboost.google/)
--   [ラボの開始手順](https://docs.google.com/document/d/1U7aUnTAftOYS5GVOwuLkUXSL4fHUz0pYvAnlYC5C6_Y/edit?usp=sharing)（「Google Cloud ラボの開始方法」を参照してください）
+-   [ラボの開始手順](https://qualia906.github.io/how-to-use-lab/)（「Google Cloud ラボの開始方法」を参照してください）
     
 -   AWS
     -   [AWS クラウドデザインパターン](http://aws.clouddesignpattern.org/index.php/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8) ([アーカイブ版](http://web.archive.org/web/20171008040110/http:/aws.clouddesignpattern.org/index.php/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8) (※上記が閲覧できないとき))
