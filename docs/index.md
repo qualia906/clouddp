@@ -51,7 +51,7 @@
 
 ### Lab 4: Bokeh と BigQuery によるカスタム対話型ダッシュボードの作成 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/1820?parent=catalog)】
 
--   [日本語ラボ手順](https://docs.google.com/document/d/1nhpS-0XRfvR_KKnSbK7hCmmPJwMfq5zbjCsOhKJeGW8/edit?usp=sharing)（このラボ手順を使用してください）
+-   [日本語ラボ手順](https://github.com/qualia906/clouddp/blob/main/docs/lab4/index.md)（このラボ手順を使用してください）
 
 -   最後のセクションの Cloud Identity-Aware Proxy の設定はこのラボでは行いません  
     (日本語ラボガイドには手順を記載していません)
