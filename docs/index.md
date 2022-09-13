@@ -49,12 +49,19 @@
 
 <br />    
 
-### Lab 4: Bokeh と BigQuery によるカスタム対話型ダッシュボードの作成 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/1820?parent=catalog)】
+### Lab 4: Cloud CDN 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/1251?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=17896257)】
 
--   [日本語ラボ手順](https://github.com/qualia906/clouddp/blob/main/docs/lab4/index.md)（このラボ手順を使用してください）
+-   このラボでは、**Direct Hosting** パターンと **Cache Distribution** パターンの組み合わせを構成します。
 
--   最後のセクションの Cloud Identity-Aware Proxy の設定はこのラボでは行いません  
-    (日本語ラボガイドには手順を記載していません)
+-   「一意の Cloud Storage バケットを作成する」セクションの手順 3 では、作成するバケットに任意の一意な名前を指定し、ロケーションタイプとロケーションは multi-region の US (米国) を指定してください。
+
+-  「バケットを公開する」セクション手順 8 の [公開アクセス] は、バケット名の右側の表の中にあります。
+-  「HTTP ロードバランサの構成を開始する」セクションでは、
+    1. [メニュー] > [ネットワーク サービス] > [**ロードバランシング**] を選択し、[ロードバランサを作成] をクリックします
+    2. [**HTTP(S) ロードバランシング**] の [構成を開始] をクリックします
+    3. [**インターネットから VM またはサーバーレス サービスへ**] を選択し、あわせて [**グローバル HTTP(S) ロードバランサ (従来型)** ] を選択します
+-   「HTTP ロードバランサを確認して作成する」セクションの手順 5 の後、3 分ほど時間を空けてから次のセクションの作業に進んでください。
+     (HTTP(S) ロードバランサの作成後、実際にバックエンドに疎通できるようになるまでタイムラグがあるためです)
  
 <br />
 
