@@ -65,7 +65,7 @@
 
 -   [ラボ手順](https://github.com/qualia906/clouddp/blob/main/docs/lab3/index.md)（このラボ手順を使用してください）
 
--   Cloud Skills Boost で表示される ユーザ 1 のユーザ名でログインしてください。
+-   Cloud Skills Boost で表示される **username 1** のユーザ名でログインしてください。
 
 <br />    
 
