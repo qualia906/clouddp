@@ -93,7 +93,9 @@
 
 ### Lab 6: Kubernetes を使った Cloud のオーケストレーション 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/557?parent=catalog)】
 
--  Kubernetes クラスタの作成時には、ラボガイドのコマンドではなく、以下のコマンドを実行してください。
+-  「設定と要件」セクションの「Google Kubernetes Engine」から作業を始めてください。
+
+-  ラボの冒頭、Kubernetes クラスタを作成する手順では、ラボ手順のコマンドではなく以下のコマンドをコピー ＆ ペーストで実行してください。
 
    ```
    gcloud container clusters create io --num-nodes=4
