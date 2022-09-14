@@ -139,8 +139,11 @@
     
    ```
    nano index.js
+   ```
    
-   # 下記のコードをコピー & ペーストで追加する
+   下記のコードをコピー & ペーストで追加します。
+   
+   ```
    const {PubSub} = require('@google-cloud/pubsub');
    const pubsub = new PubSub();
    const express = require('express');
@@ -187,8 +190,11 @@
     
    ```
    nano Dockerfile
+   ```
 
-   # 下記のコードを追加
+   下記のコードを追加します。
+   
+   ```
    FROM node:10
    WORKDIR /usr/src/app
    COPY package.json package*.json ./
@@ -464,8 +470,8 @@ Emal Service が正常にデプロイされました。
 
 ### Pub/Sub にメールサービスをトリガーさせるための設定
 
-Pub/Sub の「new-lab-report」トピックにメッセージがパブリッシュされたときに、Email Serive をトリガーする必要があります。このためには、Cloud Run 上の Email Service メッセージを送信して実行をトリガーする権限を Pub/Sub に付与する必要があります。  
-そのため、ここでは Pub/Sub に持たせるアカウントであるサービス アカウントの設定と、そのサービス アカウントへの権限付与の設定を行います (詳細は理解しなくて構いません)
+Pub/Sub の「new-lab-report」トピックにメッセージがパブリッシュされたときに、Email Serive をトリガーする必要があります。このためには、Cloud Run 上の Email Service にメッセージを送信して実行をトリガーする権限を Pub/Sub に付与する必要があります。  
+そのため、ここでは Pub/Sub に持たせるアカウントであるサービス アカウントの設定と、そのサービス アカウントへの権限付与の設定を行います (ここでは詳細は理解しなくて構いません)
 
 ![650_email-trigger.png](https://lh3.googleusercontent.com/3A5PhRwyxkqzMgDUSvfEptB7pxPvjqazeFZIo_v0-IisgVRIhIlZN-tfGQqd-K7s-KhCuvJgWZFh0kAz6fD1FTh46XXnG8c0JRmgbcT16x9eEvPfJvJIcQZaVwEWXCmZDBqq_5RxhimSmItT-xvo7Q)
 <br />
@@ -842,7 +848,7 @@ Lab Report Service が トピックにパブリッシュしたメッセージに
    
    <br />
 
-10. デプロイが完了したら、Cloud Console で Emal Service の [ログ] 画面に戻り、画面右上隅の更新アイコンをクリックし、新しいログを確認します。
+10. デプロイが完了したら、Cloud Console で Emal Service の [ログ] 画面に戻り、画面右上隅の更新アイコンをクリックし、新しいログを確認します。(※ 最新のログが表示されるまで下にスクロールし続けてください)
     
     ID 12、34、56 のメールが正常に送信され、Email Service がステータス コード 204 を返し、Pub/Sub がサービス呼び出しの再試行を停止したことがわかります。  
     Pub/Sub は正常にサービスを呼び出せるまで再試行を続けていたので、データは失われていません。これで堅牢なシステムの基盤ができあがりました。
