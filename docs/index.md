@@ -113,3 +113,19 @@
    ```
    authorization failed
    ```
+
+<br />
+
+# Kubernetes について
+
+![](./img/k8s-1.jpg)
+
+![](./img/k8s-2.jpg)
+
+![](./img/k8s-3.jpg)
+
+![](./img/k8s-4.jpg)
+
+![](./img/k8s-5.jpg)
+
+![](./img/k8s-6.jpg)
