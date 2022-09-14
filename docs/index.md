@@ -87,6 +87,8 @@
 
 ### Lab 5: Spinnaker と Kubernetes Engine による継続的デリバリーパイプライン【[Open Lab Site](https://www.cloudskillsboost.google/focuses/552?parent=catalog)】
 
+-   このラボでは [進行状況の確認] ボタンが正常に動作しません。手順に漏れがないように注意いただきつつ、 [進行状況の確認] でチェックがつかなくても先に手順を進めてください。
+
 <br />
 
 ### Lab 6: Kubernetes を使った Cloud のオーケストレーション 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/557?parent=catalog)】
