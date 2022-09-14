@@ -33,7 +33,7 @@
 
 <br />
 
-### Lab 2: Cloud Pub/Sub - Qwik Start (オプション)【[Open Lab Site](https://www.cloudskillsboost.google/focuses/3719?catalog_rank=%7B%22rank%22%3A5%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=1928407)】
+### Lab 2: Cloud Pub/Sub - Qwik Start (オプション)【~~Open Lab Site~~】
 
 -   「メッセージの表示」セクションでは Cloud Shell を開いてコマンドを実行してください。
 
