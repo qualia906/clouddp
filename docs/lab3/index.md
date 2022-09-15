@@ -116,7 +116,7 @@
    
    <br />
 
-4. コード内の scripts セクションに以下のように "start": "node index.js" の行を追加して、ファイルを保存します。  
+4. コード内の scripts セクションに以下のように ``"start": "node index.js",`` の行を追加して、ファイルを保存します。  
    > **Warning**  
    > 行頭が適切にインデントされていることを確認してください。  
    > インデントを修正する場合、全角スペースを使わないように注意してください。  
@@ -348,7 +348,7 @@ Lab Report Service が「new-lab-report」トピックにメッセージをパ�
    <br />
 
 2. nano エディタで、アプリケーションとその依存関係を記述する package.json ファイルを更新します。start 命令を追加して Cloud Run にコードの実行方法を指示します。  
-   package.json ファイルを開き、scripts セクションに以下のように `"start": "node index.js"` の行を追加します。  
+   package.json ファイルを開き、scripts セクションに以下のように `"start": "node index.js",` の行を追加します。  
    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
     
    ```
@@ -568,7 +568,7 @@ Pub/Sub の「new-lab-report」トピックにメッセージがパブリッシ�
    
    <br />
 
-3. nano エディタで package.json ファイルを編集し、scripts セクションに以下のように `"start": "node index.js"` の行を追加します。  
+3. nano エディタで package.json ファイルを編集し、scripts セクションに以下のように `"start": "node index.js",` の行を追加します。  
    編集が完了したら、Ctrl + O、Enter、Ctrl + X で nano エディタを終了します。
 
    ```
