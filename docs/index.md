@@ -128,4 +128,6 @@
 
 ![](./img/k8s-5.jpg)
 
+![](./img/k8s-7.jpg)
+
 ![](./img/k8s-6.jpg)
