@@ -24,7 +24,7 @@
 
 <br />
 
-### Lab 1: HTTP Load Balancer with Cloud Armor【[Open Lab Site](https://www.cloudskillsboost.google/focuses/1232?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=7978999)】
+### Lab 1: HTTP Load Balancer with Cloud Armor【<a href="https://www.cloudskillsboost.google/focuses/1232?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=7978999" target="_blank">Open Lab Site</a>】
 
 -   「インスタンステンプレートを構成する」セクションの手順 4 では [管理、セキュリティ、ディスク、ネットワーク、単一テナンシー] ではなく、画面下方の [**詳細オプション**] をクリックしてください。
     
@@ -59,15 +59,15 @@
 
 <br />    
 
-### Lab 3: Cloud Run と Pub/Sub を使用して復元性に優れた非同期システムをビルドする 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/8389?parent=catalog)】
+### Lab 3: Cloud Run と Pub/Sub を使用して復元性に優れた非同期システムをビルドする 【<a href="https://www.cloudskillsboost.google/focuses/8389?parent=catalog" target="_blank">Open Lab Site</a>】
 
--   [ラボ手順](https://github.com/qualia906/clouddp/blob/main/docs/lab3/index.md)（このラボ手順を使用してください）
+-   <a href="https://github.com/qualia906/clouddp/blob/main/docs/lab3/index.md" target="_blank">ラボ手順</a>（このラボ手順を使用してください）
 
 -   Cloud Skills Boost で表示される **username 1** のユーザ名でログインしてください。
 
 <br />    
 
-### Lab 4: Cloud CDN 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/1251?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=17896257)】
+### Lab 4: Cloud CDN 【<a href="https://www.cloudskillsboost.google/focuses/1251?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=17896257" target="_blank">Open Lab Site</a>】
 
 -   このラボでは、**Direct Hosting** パターンと **Cache Distribution** パターンの組み合わせを構成します。
 
@@ -85,13 +85,13 @@
  
 <br />
 
-### Lab 5: Spinnaker と Kubernetes Engine による継続的デリバリーパイプライン【[Open Lab Site](https://www.cloudskillsboost.google/focuses/552?parent=catalog)】
+### Lab 5: Spinnaker と Kubernetes Engine による継続的デリバリーパイプライン【<a href="https://www.cloudskillsboost.google/focuses/552?parent=catalog" target="_blank">Open Lab Site</a>】
 
 -   このラボでは [進行状況の確認] ボタンが正常に動作しません。手順に漏れがないように注意いただきつつ、 [進行状況の確認] でチェックがつかなくても先に手順を進めてください。
 
 <br />
 
-### Lab 6: Kubernetes を使った Cloud のオーケストレーション 【[Open Lab Site](https://www.cloudskillsboost.google/focuses/557?parent=catalog)】
+### Lab 6: Kubernetes を使った Cloud のオーケストレーション 【<a href="https://www.cloudskillsboost.google/focuses/557?parent=catalog" target="_blank">Open Lab Site</a>】
 
 -  「設定と要件」セクションの「Google Kubernetes Engine」から作業を始めてください。
 
