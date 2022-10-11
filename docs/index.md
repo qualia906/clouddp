@@ -1,6 +1,7 @@
 ## Links
 
 -   [Cloud Skills Boost](https://www.cloudskillsboost.google/)
+-   <a href="https://www.cloudskillsboost.google/" target="_blank">Cloud Skills Boost</a>
 -   [ラボの開始手順](https://qualia906.github.io/skillsboost/how-to-use-lab/)（「Google Cloud ラボの開始方法」を参照してください）
     
 -   AWS
