@@ -1,19 +1,18 @@
 ## Links
 
--   [Cloud Skills Boost](https://www.cloudskillsboost.google/)
 -   <a href="https://www.cloudskillsboost.google/" target="_blank">Cloud Skills Boost</a>
--   [ラボの開始手順](https://qualia906.github.io/skillsboost/how-to-use-lab/)（「Google Cloud ラボの開始方法」を参照してください）
+-   <a href="https://qualia906.github.io/skillsboost/how-to-use-lab/" target="_blank">ラボの開始手順</a> （「Google Cloud ラボの開始方法」を参照してください）
     
 -   AWS
-    -   [AWS クラウドデザインパターン](http://aws.clouddesignpattern.org/index.php/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8) ([アーカイブ版](http://web.archive.org/web/20171008040110/http:/aws.clouddesignpattern.org/index.php/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8) (※上記が閲覧できないとき))
+    -   <a href="http://aws.clouddesignpattern.org/index.php/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" target="_blank">AWS クラウドデザインパターン</a> (<a href="http://web.archive.org/web/20171008040110/http:/aws.clouddesignpattern.org/index.php/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" target="_blank">アーカイブ版</a> (※左記が閲覧できないとき))
     
 
 -   Microsoft Azure
-    -   [クラウド設計パターン](https://docs.microsoft.com/ja-jp/azure/architecture/patterns/)
+    -   <a href="https://docs.microsoft.com/ja-jp/azure/architecture/patterns/" target="_blank">クラウド設計パターン</a>
   
 -  Google Cloud
-    -   [Google Cloud ソリューションデザインパターン](https://events.withgoogle.com/solution-design-pattern/)
-    -   [Google Cloud アーキテクチャ センター](https://cloud.google.com/architecture?hl=ja)
+    -   <a href="https://events.withgoogle.com/solution-design-pattern/" target="_blank">Google Cloud ソリューションデザインパターン</a>
+    -   <a href="https://cloud.google.com/architecture?hl=ja" target="_blank">Google Cloud アーキテクチャ センター</a>
  
 <br /> 
   
